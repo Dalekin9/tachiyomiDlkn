@@ -64,8 +64,7 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
                 bold { append(context.getString(R.string.transition_previous)) }
                 append("\n${prevChapter.name}")
                 if (!prevChapter.scanlator.isNullOrBlank()) {
-                    append(DOT_SEPERATOR)
-                    append("${prevChapter.scanlator}")
+                    append("\n${prevChapter.scanlator}")
                 }
                 if (isPrevDownloaded) addDLImageSpan()
             }
@@ -73,8 +72,7 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
                 bold { append(context.getString(R.string.transition_current)) }
                 append("\n${transition.from.chapter.name}")
                 if (!transition.from.chapter.scanlator.isNullOrBlank()) {
-                    append(DOT_SEPERATOR)
-                    append("${transition.from.chapter.scanlator}")
+                    append("\n${transition.from.chapter.scanlator}")
                 }
                 if (isCurrentDownloaded) addDLImageSpan()
             }
